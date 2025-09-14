@@ -1,0 +1,35 @@
+Basic Java Topics
+Java Fundamentals: ⚙️ Know the basics: What is Java? Why is it platform-independent? What's the difference between JDK, JRE, and JVM? Be ready to explain the concept of bytecode and how it enables "Write Once, Run Anywhere."
+
+Object-Oriented Programming (OOP) Concepts: 🐘 This is a cornerstone of Java. You must understand and be able to explain the four pillars of OOP with examples:
+
+Encapsulation: The bundling of data and methods that operate on that data within a single unit (a class). Explain access modifiers like public, private, and protected.
+
+Inheritance: The mechanism where one class inherits the properties and behaviors of another. Differentiate between is-a and has-a relationships.
+
+Polymorphism: The ability of an object to take on many forms. Explain both compile-time polymorphism (method overloading) and runtime polymorphism (method overriding).
+
+Abstraction: The concept of hiding complex implementation details and showing only the essential features of an object. Discuss the difference between abstract classes and interfaces.
+
+Data Types and Variables: Understand the difference between primitive data types (e.g., int, boolean, char) and non-primitive/reference types (e.g., String, arrays). Know how to declare and initialize variables.
+
+Control Structures: Be proficient with loops (for, while, do-while) and conditional statements (if, else if, switch).
+
+Strings and Arrays: Know the fundamental differences between String, StringBuilder, and StringBuffer, particularly their mutability and thread safety. Understand how to declare and manipulate arrays.
+
+Exception Handling: ⚠️ Know how to handle runtime errors gracefully using try, catch, finally, and throw blocks. Understand the exception hierarchy and the difference between checked and unchecked exceptions.
+
+Intermediate Java Topics
+Collections Framework: 🗂️ This is a crucial topic. Be ready to explain the hierarchy (Collection, List, Set, Map) and the internal workings of common classes like ArrayList, LinkedList, HashMap, and HashSet. Discuss the difference between them, their time complexity for various operations, and their use cases.
+
+Multithreading and Concurrency: 🏃🏾‍♂️ A complex but vital area. Know how to create threads (by implementing the Runnable interface or extending the Thread class). Explain concepts like the thread lifecycle, synchronization, deadlocks, and how to prevent them.
+
+Generics: Understand how generics provide type safety at compile time and eliminate the need for casting.
+
+I/O and File Handling: Know how to read from and write to files using Java's I/O streams and classes like BufferedReader and FileWriter.
+
+Java Memory Model: Be able to describe the different memory areas of the JVM: Heap, Stack, and Method Area. Understand where different types of data are stored.
+
+Garbage Collection: 🧹 Know what garbage collection is and how it works. You should be able to explain the process and mention different garbage collectors like Serial, Parallel, and G1.
+
+New Features (Java 8+): Know the key additions in modern Java, especially lambda expressions and the Stream API. Be prepared to write code snippets using these features to solve problems.
