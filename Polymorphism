@@ -1,0 +1,51 @@
+// Compile-time Polymorphism (Method Overloading)
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        System.out.println(c.add(5, 10));       // int version
+        System.out.println(c.add(5.5, 4.5));   // double version
+    }
+}
+
+
+// Runtime Polymorphism (Method Overriding)
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a;
+
+        a = new Dog();
+        a.sound();   // Dog barks
+
+        a = new Cat();
+        a.sound();   // Cat meows
+    }
+}
+
+
