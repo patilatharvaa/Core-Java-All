@@ -1,0 +1,46 @@
+class Student {
+    String name;
+    int age;
+
+    // 1. Default constructor
+    Student() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    // 2. Parameterized constructor (1 parameter)
+    Student(String n) {
+        name = n;
+        age = 18;   // default age
+    }
+
+    // 3. Parameterized constructor (2 parameters)
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println(name + " " + age);
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s1 = new Student();                // default constructor
+        Student s2 = new Student("Atharva");       // 1 parameter
+        Student s3 = new Student("Fan", 21);       // 2 parameters
+
+        s1.display();  
+        s2.display();  
+        s3.display();
+    }
+}
+
+
+// output : 
+Unknown 0
+Atharva 18
+Fan 21
+
+
