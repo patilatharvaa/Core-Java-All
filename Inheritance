@@ -1,0 +1,196 @@
+// Inheritance : 
+// Parent class
+class Vehicle {
+    String brand = "Tata";
+
+    void run() {
+        System.out.println("Vehicle is running...");
+    }
+}
+
+// Child class
+class Car extends Vehicle {
+    String model = "Safari";
+
+    void show() {
+        System.out.println(brand + " " + model);
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.run();   // parent method
+        c.show();  // child method
+    }
+}
+
+
+// single inheritance :
+// Parent class
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating...");
+    }
+}
+
+// Child class (inherits from Animal)
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking...");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();   // Parent class method
+        d.bark();  // Child class method
+    }
+}
+
+
+
+// Multilevel inheritance : 
+// Grandparent class
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating...");
+    }
+}
+
+// Parent class
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking...");
+    }
+}
+
+// Child class
+class Puppy extends Dog {
+    void weep() {
+        System.out.println("Puppy is weeping...");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Puppy p = new Puppy();
+
+        p.eat();   // From Animal (Grandparent)
+        p.bark();  // From Dog (Parent)
+        p.weep();  // From Puppy (Child)
+    }
+}
+
+
+// Hierarchical inheritance
+// Parent class
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating...");
+    }
+}
+
+// Child1 class
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog is barking...");
+    }
+}
+
+// Child2 class
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Cat is meowing...");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();   // Parent method
+        d.bark();  // Dog method
+
+        Cat c = new Cat();
+        c.eat();   // Parent method
+        c.meow();  // Cat method
+    }
+}
+
+
+// multiple inheritance 
+// First interface
+interface Animal {
+    void eat();
+}
+
+// Second interface
+interface Pet {
+    void play();
+}
+
+// Class implementing multiple interfaces
+class Dog implements Animal, Pet {
+    public void eat() {
+        System.out.println("Dog is eating...");
+    }
+
+    public void play() {
+        System.out.println("Dog is playing...");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();   // From Animal
+        d.play();  // From Pet
+    }
+}
+
+
+// hybrid inheritance :
+// Base interface
+interface LivingBeing {
+    void breathe();
+}
+
+// Parent class
+class Animal {
+    void eat() {
+        System.out.println("Animal is eating...");
+    }
+}
+
+// Another interface
+interface Pet {
+    void play();
+}
+
+// Child class (Hybrid Inheritance: class + interfaces)
+class Dog extends Animal implements LivingBeing, Pet {
+    public void breathe() {
+        System.out.println("Dog is breathing...");
+    }
+
+    public void play() {
+        System.out.println("Dog is playing...");
+    }
+
+    void bark() {
+        System.out.println("Dog is barking...");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();      // From Animal (class)
+        d.breathe();  // From LivingBeing (interface)
+        d.play();     // From Pet (interface)
+        d.bark();     // From Dog (own method)
+    }
+}
+
+
