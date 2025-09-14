@@ -1,0 +1,43 @@
+class Student {
+    // private data (hidden from outside)
+    private String name;
+    private int age;
+
+    // getter method
+    public String getName() {
+        return name;
+    }
+
+    // setter method
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // getter method
+    public int getAge() {
+        return age;
+    }
+
+    // setter method (with validation)
+    public void setAge(int age) {
+        if(age > 0) {
+            this.age = age;
+        } else {
+            System.out.println("Age must be positive!");
+        }
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student();
+
+        // setting data using setter
+        s.setName("Atharva");
+        s.setAge(21);
+
+        // getting data using getter
+        System.out.println("Name: " + s.getName());
+        System.out.println("Age: " + s.getAge());
+    }
+}
