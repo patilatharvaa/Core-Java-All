@@ -1,0 +1,60 @@
+class Student {
+    String name;
+    int age;
+
+    Student() {
+        this("Unknown", 0);   // दुसरा constructor call केला
+    }
+
+    Student(String n) {
+        this(n, 18);          // दुसरा constructor call
+    }
+
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println(name + " " + age);
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student("Atharva");
+        Student s3 = new Student("Fan", 21);
+
+        s1.display();
+        s2.display();
+        s3.display();
+    }
+}
+
+
+// output :
+Unknown 0
+Atharva 18
+Fan 21
+
+
+// using super() : 
+class Person {
+    Person() {
+        System.out.println("Person constructor called");
+    }
+}
+
+class Student extends Person {
+    Student() {
+        super();  // parent constructor call
+        System.out.println("Student constructor called");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student();
+    }
+}
